@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Chrisantus Pinger</title>
+	</head>
+	<body>
+		<button onclick="sendMessage()">Send</button>
+	</body>
+	<script>
+			function sendMessage() {
+			const request = new XMLHttpRequest();
+			request.open("POST", "https://discord.com/api/webhooks/1001905897636909166/Pc_q_l5GQZikGYY8mjQ7QhnYs3H6-_mIbGJkK8yk6JGh8BfJxGUzAgtF9mJLw9YWnsC4");
+			
+			request.setRequestHeader('Content-type', 'application/json');
+
+			const params = {
+				content: "<@251835444067696641>"
+			}
+
+			request.send(JSON.stringify(params));
+		}
+	</script>
+</html>
