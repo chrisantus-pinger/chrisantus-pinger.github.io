@@ -3,15 +3,43 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Chrisantus Pinger</title>
+		<title>Chrisantus Pinger Deluxe</title>
 	</head>
 	<body>
-		<button style="height: 200px;width:200px" onclick="sendMessage()">Send</button>
+		<button onclick="sendMessage()">Pinger 0</button>
+		<button onclick="sendMessage1()">Pinger 1</button>
+		<button onclick="sendMessage2()">Pinger 2</button>
 	</body>
 	<script>
 		function sendMessage() {
 			const request = new XMLHttpRequest();
 			request.open("POST", "https://discord.com/api/webhooks/1001905897636909166/Pc_q_l5GQZikGYY8mjQ7QhnYs3H6-_mIbGJkK8yk6JGh8BfJxGUzAgtF9mJLw9YWnsC4");
+			
+			request.setRequestHeader('Content-type', 'application/json');
+
+			const params = {
+				content: "<@251835444067696641>"
+			}
+
+			request.send(JSON.stringify(params));
+		}
+		
+		function sendMessage1() {
+			const request = new XMLHttpRequest();
+			request.open("POST", "https://discord.com/api/webhooks/1002210260431409262/l9BimkXfbzkzRP1r32GDlx_GKAvPd3wRaCFIltS9l0tdmSGdYKcTaxrVhJ_SipzN0OWk");
+			
+			request.setRequestHeader('Content-type', 'application/json');
+
+			const params = {
+				content: "<@251835444067696641>"
+			}
+
+			request.send(JSON.stringify(params));
+		}
+		
+		function sendMessage2() {
+			const request = new XMLHttpRequest();
+			request.open("POST", "https://discord.com/api/webhooks/1002210470524108800/JibOjN-NqeE887NsYtDCrNyCGVKw1Du2wI3mYRHnCkjfReR9Uv5CylK13l7FtealCL9k");
 			
 			request.setRequestHeader('Content-type', 'application/json');
 
